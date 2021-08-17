@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th> Id in database </th>
+            <th> Pet name </th>
+            <th> Owner </th>
+            <th> Severity </th>
+            <th> Notes </th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for diagnosis in diagnoses %}
+            <tr>
+                <td>{{ diagnosis.id }}</td>
+                <td>{{ diagnosis.petName }}</td>
+                <td>{{ diagnosis.ownerName }}</td>
+                <td>{{ diagnosis.severity }}</td>
+                <td>{{ diagnosis.note }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
